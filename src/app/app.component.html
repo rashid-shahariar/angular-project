@@ -1,0 +1,12 @@
+<div>
+  <button (click)="getWeather()">Get Weather</button>
+
+  <div *ngIf="weatherData.length">
+    <div *ngFor="let weather of weatherData" class="card">
+      <h2>Date: {{ weather.date | date:"MMM dd, yyyy" }}</h2>
+      <p>Temperature in C: {{ weather.temperatureC }}</p>
+      <p>Temperature in F: {{ weather.temperatureF }}</p>
+      <p>Summary: {{ weather.summary }}</p>
+    </div>
+  </div>
+</div>
